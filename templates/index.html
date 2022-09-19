@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link href="{{url_for('static' ,filename='style.css')}}" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/81273611fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page">
+        
+        <div class="photo">
+            <img src="{{url_for('static',filename='user.png')}}" alt="">
+        </div>
+        <div class="title">
+            <div class="text">
+                <p class="name">{{nombre}} {{apellido}}</p>
+                <p class="puesto" >{{ocupacion}} </p>
+            </div>  
+        </div>
+        <div class="sidebar">
+            <div class="sidetext">
+                <h2 >CONTACTO</h2>
+                <hr>
+                <p>{{date}}</p>
+                <p><i class="fa-solid fa-phone"></i>{{numero}}</p>
+                <p><i class="fa-regular fa-envelope"></i>{{email}}</p>
+                <p><i class="fa-solid fa-location-dot"></i> {{nacionalidad}}</p>
+                <!--<p><i class="fa-brands fa-linkedin"></i>linkedin.com/jose-martinez</p>-->
+            </div>
+            <div class="sidetext">
+                <h2 >IDIOMAS</h2>
+                <hr>
+                <p>Español: Nativo</p>
+                <p>Inglés: {{n_ingles}}</p>
+            </div>
+            <div class="sidetext">
+                <h2 >LENGUAJES DE PROGRAMACION</h2>
+                <hr>
+                <ul>
+                    {%for i in range(0, lenl)%}
+                        <li type="disc">{{lenguajes[i]}}</li>
+                    {%endfor%}
+                </ul>
+                
+            </div>
+            <div class="sidetext">
+                <h2 >HABILIDADES</h2>
+                <hr>
+                <ul>
+                    {%for i in range(0, lenh)%}
+                        <li type="disc">{{habilidades[i]}}</li>
+                    {%endfor%}
+                </ul>
+            </div>
+            <div class="sidetext">
+                <h2 >OTROS INTERESES</h2>
+                <hr>
+                <ul>
+                    <li type="disc">Creador de yincanas</li>
+                    <li type="disc">Paseos ecológicos grupales</li>
+                    <li type="disc">Lectura grupal en inglés</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maintext">
+                <h2 >PERFIL</h2>
+                <hr>
+                <p>{{perfil}}</p>
+            </div>
+            <div class="maintext">
+                <h2 >EXPERIENCIA LABORAL</h2>
+                <hr>
+                <h3>Trabajador Social</h2>
+                <h4><span class="italic">México DF</span>, <span class="gray-color">| 2022 - Actualmente </span> </h3>
+                <ul>
+                    <li class="expl" type="disc">Coordinador y mediador entre los equipos
+                        de ayuda psicológica a jóvenes y niños en exclusión social.
+                    </li>
+                    <li class="expl" type="disc">Velar por la salud mental del equipo y de miembros 
+                        involucrados en proyectos</li>
+                    <li class="expl" type="disc">Mapeo de necesidades estratégicas y lógicas 
+                        para las diferentes áreas.</li>
+                    <li class="expl" type="disc">Monitor de ejercicios físicos para adolescentes. </li>
+                    <li class="expl" type="disc">Programar diferentes actividades extracurriculares 
+                        en los involucrados</li>
+                </ul>
+                
+
+                <h3>Trabajador Social</h2>
+                <h4><span class="italic">México DF</span>,<span class="gray-color">| 2020 - 2022 </span></h3>
+                <ul>
+                    <li class="expl" type="disc">Funciones para seguimientos de casos para jóvenes con problemas de adicciones.
+                    </li>
+                    <li class="expl" type="disc">Capacitaciones e integración vinculadas a medidas preventivas.</li>
+                    <li class="expl" type="disc">Recopilación de evidencias para auditorías y programas sociales.</li>
+                </ul>
+                <h3>Trabajador Social (Prácticas)</h2>
+                <h4><span class="italic">Zaragoza</span>, España <span class="gray-color">| 2019 - 2020 </span></h3>
+                <ul>
+                    <li class="expl" type="disc">Profesor de lengua española e inglesa para jovenes migrantes.
+                    </li>
+                    <li class="expl" type="disc">Monitor de actividades ecológicas con adolescentes.</li>
+                    <li class="expl" type="disc">Coordinador de áreas deportivas</li> 
+                </ul>
+            </div>
+            <div class="maintext">
+                <h2 >FORMACION</h2>
+                <hr>
+                <h3>Grado de Trabajo Social</h2>
+                <h4><span class="italic">ESMA</span>,Madrid <span class="gray-color">| 2012 - 2015 </span></h3>
+                
+                <h3>Licenciatura Profesional</h2>
+                <h4><i>Universidad de la Frontera</i>, Perú AQP <span class="gray-color">| 2011 - 2012</span></h3>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
