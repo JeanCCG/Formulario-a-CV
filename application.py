@@ -24,6 +24,15 @@ def hello():
     languages = request.form.getlist('languages')
     habilidades = request.form.getlist('habilidades')
     perfil=request.form.get("perfil")
+    aptitudes=request.form.get("aptitudes")
+    aptitudeslist=[]
+    straux=""
+    for i in aptitudes:
+        straux+=i
+        if  i=='.':
+            aptitudeslist.append(straux)
+            straux=""
+
     return render_template("index.html"
     ,nombre=name
     ,apellido=lastname
@@ -38,4 +47,6 @@ def hello():
     ,habilidades=habilidades
     ,lenh=len(habilidades)
     ,perfil=perfil
+    ,aptitudes=aptitudeslist
+    ,lena=len(aptitudeslist)
     )

@@ -8,10 +8,10 @@
 }
 .page{
     margin: 0 auto;
-    width: 76vh;
+    width: 80vh;
     height: 100vh;
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 38% 62%;
     grid-template-rows: 17% 83%; 
 }
 .photo,.title{

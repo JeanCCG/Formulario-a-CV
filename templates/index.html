@@ -25,7 +25,7 @@
             <div class="sidetext">
                 <h2 >CONTACTO</h2>
                 <hr>
-                <p>{{date}}</p>
+                <p><i class="fa-solid fa-calendar"></i>{{date}}</p>
                 <p><i class="fa-solid fa-phone"></i>{{numero}}</p>
                 <p><i class="fa-regular fa-envelope"></i>{{email}}</p>
                 <p><i class="fa-solid fa-location-dot"></i> {{nacionalidad}}</p>
@@ -57,12 +57,12 @@
                 </ul>
             </div>
             <div class="sidetext">
-                <h2 >OTROS INTERESES</h2>
+                <h2 >APTITUDES</h2>
                 <hr>
                 <ul>
-                    <li type="disc">Creador de yincanas</li>
-                    <li type="disc">Paseos ecológicos grupales</li>
-                    <li type="disc">Lectura grupal en inglés</li>
+                    {%for i in range(0, lena)%}
+                        <li type="disc">{{aptitudes[i]}}</li>
+                    {%endfor%}
                 </ul>
             </div>
         </div>

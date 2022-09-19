@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        h5,h3{
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
-    <form action="{{url_for('hello')}}" method="post" style="margin:0 auto;width:50rem;padding-top: 15px;">
+    <form action="{{url_for('hello')}}" method="post" style="margin:0 auto;max-width:50rem;padding-top: 15px;">
+        <h3>Información Básica: </h3>
         <div class="input-group mb-3 ">
         <input type="text" class="form-control" name=name placeholder="Nombres" aria-label="Username" aria-describedby="basic-addon1">
         </div>
@@ -16,26 +22,18 @@
         <div class="input-group mb-3 ">
             <input type="text" class="form-control" name=lastname placeholder="Apellidos" aria-label="Username" aria-describedby="basic-addon1">
         </div>
-
+        <div class="input-group mb-3 ">
+            <input type="text" class="form-control" name=occupation placeholder="Ocupacion" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <h5>Fecha de Nacimiento: </h5>
         <div class="input-group mb-3 ">
             <input type="date" class="form-control" name=date placeholder="Time" aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
-        <div class="input-group mb-3 ">
-            <input type="text" class="form-control" name=occupation placeholder="Ocupacion" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 ">
-            <input type="text" class="form-control" name=number placeholder="Numero" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3 ">
-            <input type="email" class="form-control" name=email placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-
+        
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+              <label class="input-group-text" for="inputGroupSelect01">País</label>
             </div>
             <select class="custom-select" name=nationality id="inputGroupSelect01">
                 <option value="Elegir" id="AF">Elegir opción</option>
@@ -278,7 +276,16 @@
                 <option value="Zimbabue" id="ZW">Zimbabue</option>
             </select>
         </div>
+        <h3>Información de Contacto:</h3>
+        <div class="input-group mb-3 ">
+            <input type="text" class="form-control" name=number placeholder="Numero" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
 
+        <div class="input-group mb-3 ">
+            <input type="email" class="form-control" name=email placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <h3>Nivel de Inglés: </h3>
         <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text" style="padding: .75rem .75rem;">
@@ -315,24 +322,8 @@
             <label for=""class="form-control" >Fluido</label> 
         </div>
         
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Options</label>
-            </div>
-            <select data-placeholder="Lenguajes de Programación" multiple name="languages">
-                <option value=""></option>
-                <option value="Python">Python</option>
-                <option value="Java">Java</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="C#">C#</option>
-                <option value="PHP">PHP</option>
-                <option value="C/C++">C/C++</option>
-                <option value="R">R</option>
-                <option value="Objective-C">Objective-C</option>
-                <option value="Swift">Swift</option>
-            </select>
-        </div>   
-        
+    
+        <h3 style="margin-top: 15px;">Habilidades:</h3>
         <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text" style="padding: .75rem .75rem;">
@@ -368,12 +359,32 @@
             </div>
             <label for=""class="form-control" >Desarrollo Android</label> 
         </div>
-        
-    
+        <div class="input-group mb-3" style="margin-top: 15px;">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Lenguajes de Programación</label>
+            </div>
+            <select data-placeholder="Lenguajes de Programación" size="6" multiple name="languages">
+                <option value=""></option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="C/C++">C/C++</option>
+                <option value="R">R</option>
+                <option value="Objective-C">Objective-C</option>
+                <option value="Swift">Swift</option>
+            </select>
+        </div>   
+        <h3>Aptitudes: </h3>
+        <div class="input-group mb-3 ">
+            <textarea class="form-control" name="aptitudes"aria-label="With textarea"></textarea>
+        </div>
+        <h3>Mi perfil</h3>
         <div class="input-group mb-3 ">
             <textarea class="form-control" name="perfil"aria-label="With textarea"></textarea>
         </div>
-        <button>Submit</button>
+        <button style="margin:0 auto; border-color: #6c757d;">Submit</button>
     </form>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
